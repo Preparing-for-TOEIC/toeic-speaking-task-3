@@ -1,4 +1,4 @@
-<!doctype html> 
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -318,13 +318,6 @@
       pointer-events:none;
     }
 
-    /* ✅ This is the IMPORTANT part: Return button anchored bottom-right of the card content */
-    .cardFooter{
-      display:flex;
-      justify-content:flex-end;
-      margin-top: 10px;
-      padding-top: 2px;
-    }
     .btnOutlineReturn{
       border-color:#a5b4fc;
       color:#1e3a8a;
@@ -411,6 +404,13 @@
       background:#fff5f5;
     }
     .dangerLink:hover{ background:#ffecec; }
+
+    /* ✅ Return button placement: inside Saved takes block */
+    .savedFooter{
+      display:flex;
+      justify-content:flex-end;
+      margin-top: 12px;
+    }
 
     /* Modal */
     .overlay{
@@ -539,8 +539,6 @@
               <a id="downloadBtn" class="btnOutline" href="#" aria-disabled="true">⬇️ Download current take</a>
             </div>
           </div>
-
-          <!-- ✅ Return button MOVED (was here) -->
         </section>
 
       </div>
@@ -552,11 +550,11 @@
           <p class="savedNote">💡 Tip: If you’re using a shared computer, remove your takes before leaving.</p>
         </div>
         <div class="savedList" id="savedList"></div>
-      </div>
 
-      <!-- ✅ Return button moved to bottom-right of the card (same position as PDF) -->
-      <div class="cardFooter">
-        <a id="returnBtn" class="btnOutline btnOutlineReturn" href="#">↩️ Return to the module</a>
+        <!-- ✅ Return button correctly placed inside Saved takes area -->
+        <div class="savedFooter">
+          <a id="returnBtn" class="btnOutline btnOutlineReturn" href="#">↩️ Return to the module</a>
+        </div>
       </div>
     </div>
   </div>
